@@ -1,0 +1,67 @@
+/* ตั้งค่าพื้นฐาน */
+body {
+    margin: 0;
+    font-family: 'Sarabun', sans-serif; /* ฟอนต์เนื้อหา */
+    background-color: #f9f7f2; /* สีพื้นหลังครีมอ่อนๆ */
+    color: #4a4a4a;
+    text-align: center;
+}
+
+/* ตั้งค่าหัวข้อให้ดูพรีเมียม */
+h1, h2, h3 {
+    font-family: 'Charm', cursive; /* ฟอนต์หัวข้อสไตล์เขียนมือ */
+    color: #b78a63; /* สีทอง/น้ำตาล */
+}
+
+h1 { font-size: 3.5rem; margin-bottom: 10px; }
+
+/* Hero Section (หน้าปก) */
+.hero {
+    /* ใส่รูปพื้นหลังตรงนี้ */
+    background-image: url('images/cover-photo.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 80vh; /* สูง 80% ของหน้าจอ */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* เงาตัวหนังสือเพื่อให้อ่านง่าย */
+}
+
+.details {
+    padding: 50px 20px;
+}
+
+/* การ์ดข้อมูล */
+.card {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* ปุ่ม RSVP */
+.btn {
+    background-color: #b78a63;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #966f4e; /* เปลี่ยนสีเมื่อเอาเมาส์ชี้ */
+}
+
+/* ทำให้รองรับมือถือ */
+@media (max-width: 600px) {
+    h1 { font-size: 2.5rem; }
+    .hero { height: 60vh; }
+}
