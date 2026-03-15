@@ -3,45 +3,325 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Somsak & Somying Wedding</title>
+    <meta name="description" content="งานแต่งงาน ฟาง และ แฟง - 14 กุมภาพันธ์ 2027">
+    <meta name="keywords" content="wedding, ฟาง, แฟง, แต่งงาน, คู่รัก">
+    <meta property="og:title" content="งานแต่งงาน ฟาง & แฟง">
+    <meta property="og:description" content="งานแต่งงานของ ฟาง และ แฟง">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/KKSA0748_Original.JPG">
+    <title>Fang & Fang - งานแต่งงาน</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Sarabun:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Sarabun:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header class="hero">
-        <h1>สมศักดิ์ & สมหญิง</h1>
-        <p class="date">14 กุมภาพันธ์ 2026</p>
-        <p>Save the Date!</p>
-    </header>
-
-    <section class="details">
-        <h2>รายละเอียดงานแต่ง</h2>
-        <div class="card">
-            <h3>พิธีเช้า</h3>
-            <p>07:00 น. - พิธีสงฆ์</p>
-            <p>09:09 น. - พิธีแห่ขันหมาก</p>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">F <span>&</span> F</a>
+            <div class="nav-links">
+                <a href="#story" class="nav-link">เรื่องราว</a>
+                <a href="#event" class="nav-link">รายละะอย่างาน</a>
+                <a href="#gallery" class="nav-link">แกลเลอรี่</a>
+                <a href="#wishes" class="nav-link">อวยพร</a>
+            </div>
         </div>
-        <div class="card">
-            <h3>งานเลี้ยงฉลอง</h3>
-            <p>18:00 น. - ร่วมรับประทานอาหาร</p>
-            <p>ณ โรงแรม แกรนด์ ไฮแอท เอราวัณ</p>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="images/KKSA0748_Original.JPG" alt="Couple" class="hero-bg-img">
+            <div class="hero-bg-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-names">
+                <span class="name bride">แฟง</span>
+                <span class="heart-pulse">♡</span>
+                <span class="name groom">ฟาง</span>
+            </div>
+            <div class="hero-date">
+                <div class="date-ornament left"></div>
+                <div class="date-text">
+                    <span class="date-day">14</span>
+                    <span class="date-month">กุมภาพันธ์</span>
+                    <span class="date-year">2027</span>
+                </div>
+                <div class="date-ornament right"></div>
+            </div>
+        </div>
+        <div class="hero-scroll" aria-label="Scroll down">
+            <span>เลื่อนลง</span>
+            <div class="scroll-arrow"></div>
         </div>
     </section>
 
-    <section class="rsvp">
-        <h2>สถานที่จัดงาน</h2>
-        <div class="map-container">
-            <p>(พื้นที่สำหรับแปะ Google Maps)</p>
+    <!-- Countdown Section -->
+    <section class="countdown" id="countdown">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">นับถอยหลังสู่วันพิเศษ</span>
+                <h2 class="section-title">เหลือเวลาอีก</h2>
+            </div>
+            <div class="countdown-grid">
+                <div class="countdown-item">
+                    <div class="countdown-circle">
+                        <svg viewBox="0 0 100 100"><circle class="circle-bg" cx="50" cy="50" r="45"/></svg>
+                        <div class="countdown-value">
+                            <span class="number" id="days">00</span>
+                            <span class="label">วัน</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-circle">
+                        <svg viewBox="0 0 100 100"><circle class="circle-bg" cx="50" cy="50" r="45"/></svg>
+                        <div class="countdown-value">
+                            <span class="number" id="hours">00</span>
+                            <span class="label">ชั่วโมง</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-circle">
+                        <svg viewBox="0 0 100 100"><circle class="circle-bg" cx="50" cy="50" r="45"/></svg>
+                        <div class="countdown-value">
+                            <span class="number" id="minutes">00</span>
+                            <span class="label">นาที</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-circle">
+                        <svg viewBox="0 0 100 100"><circle class="circle-bg" cx="50" cy="50" r="45"/></svg>
+                        <div class="countdown-value">
+                            <span class="number" id="seconds">00</span>
+                            <span class="label">วินาที</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <br>
-        <a href="ใส่ลิงก์ Google Form ตรงนี้" class="btn">ลงทะเบียนร่วมงาน (RSVP)</a>
     </section>
 
-    <footer>
-        <p>#SomsakSomyingForever</p>
+    <!-- Story Section -->
+    <section class="story" id="story">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">ความรักของเรา</span>
+                <h2 class="section-title">เรื่องราวของคู่บ่าวสาว</h2>
+                <div class="title-decoration">
+                    <span></span>
+                    <i>♥</i>
+                    <span></span>
+                </div>
+            </div>
+            <div class="story-content">
+                <p class="story-text">
+                    เป็นเรื่องที่เริ่มต้นมาจากความบังเอิญ<br>
+                    สองหัวใจนี้ได้พบกันและเติมเต็มซึ่งกันและกัน<br>
+                    วันนี้คือวันที่เราจะเริ่มต้นบทใหม่ของชีวิต<br>
+                    ด้วยความรักและความหวังที่งอกงาม
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Couple Section -->
+    <section class="couple" id="couple">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">The Happy Couple</span>
+                <h2 class="section-title">คู่บ่าวสาว</h2>
+            </div>
+            <div class="couple-grid">
+                <div class="couple-card bride-card">
+                    <div class="couple-photo">
+                        <img src="images/KKSA0748_Original.JPG" alt="เจ้าสาว ฟาง" loading="lazy">
+                    </div>
+                    <div class="couple-info">
+                        <span class="role-tag">เจ้าสาว</span>
+                        <h3 class="couple-name">ฟาง</h3>
+                        <p class="couple-desc">หัวใจที่อ่อนโยน เปี่ยมด้วยรัก</p>
+                    </div>
+                </div>
+                <div class="couple-divider">
+                    <span class="divider-heart">♥</span>
+                </div>
+                <div class="couple-card groom-card">
+                    <div class="couple-photo">
+                        <img src="images/4900478204365865839.4d1d11f363121c21e549b3f00e8b176f.23070306.jpg" alt="เจ้าบ่าว แฟง" loading="lazy">
+                    </div>
+                    <div class="couple-info">
+                        <span class="role-tag">เจ้าบ่าว</span>
+                        <h3 class="couple-name">แฟง</h3>
+                        <p class="couple-desc">หัวใจที่แข็งแกร่ง พร้อมดูแล</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Section -->
+    <section class="event" id="event">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Wedding Event</span>
+                <h2 class="section-title">รายละเอียดงาน</h2>
+            </div>
+            <div class="event-grid">
+                <div class="event-card">
+                    <div class="event-icon">📅</div>
+                    <div class="event-info">
+                        <h3 class="event-title">วันและเวลา</h3>
+                        <p class="event-text">
+                            <strong>วันที่:</strong> 14 กุมภาพันธ์ 2027<br>
+                            <strong>เวลา:</strong> 09:00 - 15:00 น.
+                        </p>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-icon">📍</div>
+                    <div class="event-info">
+                        <h3 class="event-title">สถานที่จัดงาน</h3>
+                        <p class="event-text">
+                            <strong>สถานที่:</strong> ห้องแห่งจันดาม โรงแรมเดอะ<br>
+                            <strong>ที่อยู่:</strong> เดอะ ทองสตรีท, กรุงเทพฯ
+                        </p>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-icon">👗</div>
+                    <div class="event-info">
+                        <h3 class="event-title">การแต่งกาย</h3>
+                        <p class="event-text">
+                            <strong>ชุดที่แนะนำ:</strong> ชุดไทย สบาย<br>
+                            <strong>สี:</strong> โทนพาสเทล, ครีม
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container-wide">
+                <div class="section-header">
+                    <span class="section-subtitle">Our Moments</span>
+                    <h2 class="section-title">ภาพแกลเลอรี่</h2>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/KKSA0585_Original.JPG" alt="ภาพคู่ 1" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/KKSA0598_Original.JPG" alt="ภาพคู่ 2" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/KKSA0600_Original.JPG" alt="ภาพคู่ 3" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/KKSA0744_Original.JPG" alt="ภาพคู่ 4" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/4900478204365865839.4d1d11f363121c21e549b3f00e8b176f.23070306.jpg" alt="ภาพคู่ 5" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/KKSA0748_Original.JPG" alt="ภาพคู่ 6" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wishes Section -->
+    <section class="wishes" id="wishes">
+        <div class="container">
+            <div class="section-header">
+                    <span class="section-subtitle">Blessings</span>
+                    <h2 class="section-title">ข้อความอวยพร</h2>
+                </div>
+                <div class="wishes-grid">
+                    <div class="wishes-form-card">
+                        <div class="form-decoration">
+                            <span>✦</span>
+                        </div>
+                        <h3 class="form-title">ฝากคำอวยพร</h3>
+                        <form id="wishForm" class="wish-form">
+                            <div class="form-group">
+                                <label for="wishName" class="form-label">ชื่อของคุณ</label>
+                                <input type="text" id="wishName" class="form-input" placeholder="ระบุชื่อของคุณ..." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="wishMessage" class="form-label">ข้อความอวยพร</label>
+                                <textarea id="wishMessage" class="form-textarea" placeholder="เขียนข้อความอวยพรให้คู่บ่าวสาว..." required></textarea>
+                            </div>
+                            <button type="submit" class="form-submit">
+                                <span>ส่งคำอวยพร</span>
+                                <span class="submit-icon">→</span>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="wishes-list-card">
+                        <h3 class="wishes-title">คำอวยพรที่ได้รับ</h3>
+                        <div class="wishes-list" id="wishesList">
+                            <div class="wish-card">
+                                <div class="wish-header">
+                                    <span class="wish-avatar">ส</span>
+                                    <span class="wish-name">สมชาย</span>
+                                </div>
+                                <p class="wish-text">ขอให้มีความสุขมากๆ นะครับ ฟางและแฟง!</p>
+                                <span class="wish-time">14 ก.พ. 70</span>
+                            </div>
+                            <div class="wish-card">
+                                <div class="wish-header">
+                                    <span class="wish-avatar">ส</span>
+                                    <span class="wish-name">สมหญิง</span>
+                                </div>
+                                <p class="wish-text">รักกันไปนานๆ นะคะ สู้ๆ!</p>
+                                <span class="wish-time">15 ก.พ. 70</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <span>↑</span>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bg">
+            <img src="images/KKSA0748_Original.JPG" alt="Footer BG" loading="lazy">
+            <div class="footer-overlay"></div>
+        </div>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span>แฟง</span>
+                <span class="footer-heart">♥</span>
+                <span>ฟาง</span>
+            </div>
+            <p class="footer-hashtag">#FangAndFang</p>
+            <p class="footer-date">14 กุมภาพันธ์ 2027</p>
+            <div class="footer-social">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Instagram</a>
+            </div>
+            <div class="footer-thanks">
+                <p>ขอบคุณที่มาร่วมแบ่งปันความสุขกับเรา</p>
+            </div>
+        </div>
     </footer>
 
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
